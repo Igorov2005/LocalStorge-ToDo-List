@@ -18,9 +18,6 @@ const updateLocalStorage = () => {
   localStorage.todo = JSON.stringify(todoData);
 };
 
-// function updateLocalStorage() {
-//   localStorage.todo = JSON.stringify(todoData);
-// };
 const render = function () {
   todoList.textContent = '';
   todoCompleted.textContent = '';
@@ -48,8 +45,6 @@ const render = function () {
     const btnTodoRemove = li.querySelector('.todo-remove');
     btnTodoRemove.addEventListener('click', function () {
       todoData.splice(todoData.indexOf(li), 1);
-      // btnTodoRemove.removeChild(this);
-      // item.remove = remove('li');
       updateLocalStorage();
       render();
     });
